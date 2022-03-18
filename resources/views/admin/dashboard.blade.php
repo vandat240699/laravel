@@ -1,26 +1,24 @@
 @extends('admin.layoutAdmin.main')
 
+@section('title', 'Dashboard')
+
 @section('chart')
-    <table border="1px">
+    <table style="width: 100%;" border="1">
         <thead>
           <tr>
             <th>name</th>
-            <th>height</th>
-            <th>weight</th>
-            <th>age</th>
-            <th>gender</th>
-            <th>avatar</th>
+            <th>description</th>
+            <th>status</th>
+            <th>slug</th>
         </tr>
         </thead>
         <tbody>
-          @foreach($students as $student)
+          @foreach($category as $cate)
             <tr>
-              <td style="width: 120px;">{{$student['name']}}</td>
-              <td style="width: 120px;">{{$student['height']}}</td>
-              <td style="width: 120px;">{{$student['weight']}}</td>
-              <td style="width: 120px;">{{$student['age']}}</td>
-              <td style="width: 120px;">{{$student['gender']}}</td>
-              <td><img style="width: 90px" src="{{$student['avatar']}}" alt=""></td>
+              <td style="width: 120px;">{{$cate->name}}</td>
+              <td style="width: 120px;">{{$cate->description}}</td>
+              <td style="width: 120px;">{{$cate->status}}</td>
+              <td style="width: 120px;">{{$cate->slug}}</td>
             </tr>
           @endforeach
         </tbody>

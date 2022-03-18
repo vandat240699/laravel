@@ -19,7 +19,9 @@
             @yield('product-sample')
         </div>
         <!-- end product-sample -->
-        <div class="product-top"></div>
+        <div class="product-top">
+            @yield('product-top')
+        </div>
         <!-- end product-top -->
         <div class="product-other"></div>
         <!-- end product-other -->

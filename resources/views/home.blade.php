@@ -86,3 +86,45 @@
     </div>
 </div>
 @endsection
+
+@section('product-top')
+    <div class="tab-panels">
+        <ul class="row">
+            <li class="col-md-4 col-sm-4"><a href="#">sản phẩm mới</a></li>
+            <li class="col-md-4 col-sm-4"><a href="">sản phẩm bán chạy</a></li>
+            <li class="col-md-4 col-sm-4"><a href="">sản phẩm phổ biến</a></li>
+        </ul>
+        <div class="panel">
+            <div class="sp-banchay row">
+                <div class="card col-md-3 col-sm-6" style="width: 18rem;">
+                    <img src="https://centimet.vn/wp-content/uploads/Giay-Gucci-Rhyton-Logo-Leather-Sneaker-7.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Chuck Taylor Classic</h5>
+                      <a href="#" class="btn btn-primary">thêm vào giỏ</a>
+                    </div>
+                </div>
+                <div class="card col-md-3 col-sm-6" style="width: 18rem;">
+                    <img src="https://centimet.vn/wp-content/uploads/Giay-Gucci-Rhyton-Logo-Leather-Sneaker-7.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Chuck Taylor Classic</h5>
+                      <a href="#" class="btn btn-primary">thêm vào giỏ</a>
+                    </div>
+                </div>
+                <div class="card col-md-3 col-sm-6" style="width: 18rem;">
+                    <img src="https://centimet.vn/wp-content/uploads/Giay-Gucci-Rhyton-Logo-Leather-Sneaker-7.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Chuck Taylor Classic</h5>
+                      <a href="#" class="btn btn-primary">thêm vào giỏ</a>
+                    </div>
+                </div>
+                <div class="card col-md-3 col-sm-6" style="width: 18rem;">
+                    <img src="https://centimet.vn/wp-content/uploads/Giay-Gucci-Rhyton-Logo-Leather-Sneaker-7.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Chuck Taylor Classic</h5>
+                      <a href="#" class="btn btn-primary">thêm vào giỏ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
