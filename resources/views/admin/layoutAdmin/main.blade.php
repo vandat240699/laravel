@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
     @include('layouts.style')
     @include('admin/layoutAdmin.jss')
     <title>@yield('title')</title>
@@ -18,6 +19,7 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 <body id="page-top">
+    @include('sweetalert::alert')
     <div id="wrapper">
         @include('admin/layoutAdmin.sidebar')
         <div id="content-wrapper" class="d-flex flex-column">
