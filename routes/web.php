@@ -32,7 +32,7 @@ Route::post('/admin/categories/add', [CategoryController::class, "add"]);
 Route::get('/admin/categories/edit/{id}', [CategoryController::class, "editForm"]);
 Route::post('/admin/categories/edit/{id}', [CategoryController::class, "edit"]);
 
-Route::delete('/admin/categories/del/{id}', [CategoryController::class, "delete"])->name('delete');
+Route::delete('/admin/categories/del/{id}', [CategoryController::class, "delete"])->name('deletecate');
 
 Route::get('/admin/products', [ProductController::class, "product"]);
 

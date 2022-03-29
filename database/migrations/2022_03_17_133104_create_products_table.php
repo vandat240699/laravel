@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('image');
             $table->string('category');
+            $table->string('price');
             $table->string('status');
             $table->integer('sl')->unsigned();
             $table->string('slug');

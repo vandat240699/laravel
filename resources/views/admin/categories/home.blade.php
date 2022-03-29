@@ -23,7 +23,7 @@
               <td style="width: 120px;">{{$cate->slug}}</td>
               <td style="width: 120px;">{{$cate->description}}</td>
               <td><a href="{{url('/admin/categories/edit/'.$cate->id)}}" class="btn btn-danger">Edit</a></td>
-              <td><form class="delete-form" action="{{route('delete',$cate->id)}}" method="POST">
+              <td><form class="delete-form" action="{{route('deletecate',$cate->id)}}" method="POST">
                 @method('DELETE')
                 @csrf
                 <button onclick="return false" class="btn btn-danger delete-cate">Delete</button>

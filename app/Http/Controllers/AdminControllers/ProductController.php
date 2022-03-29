@@ -51,6 +51,12 @@ class ProductController extends Controller
 
     public function edit(Request $request, $id){
         $product = Product::find($id);
+        $img = $_FILES['image'];
+        if($img['size']>0){
+            $fileName = uniqid() . '-' . $img['name'];
+            move_uploaded_file($img['name'], './public/uploads/'.$fileName);
+            $model->avatar = 'uploads/'.$fileName;
+        }
         $request->validate(
             [
                 'name' => 'required',

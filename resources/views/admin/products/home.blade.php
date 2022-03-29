@@ -3,13 +3,14 @@
 @section('title', 'Products')
 
 @section('chart')
-    <a href="/admin/products/add"><button type="button" class="btn btn-primary">Thêm sản phẩm mới</button></a>
+    <a class="btn btn-primary" href="/admin/products/add">Thêm sản phẩm mới</a>
     <table style="width: 100%; margin-top: 20px" border="1">
         <thead>
           <tr>
             <th>Name</th>
             <th>Image</th>
             <th>Category</th>
+            <th>Price</th>
             <th>Status</th>
             <th>Số lượng</th>
             <th>Slug</th>
@@ -23,6 +24,7 @@
             <td style="width: 120px;">{{$pro->name}}</td>
             <td style="width: 120px;"><img style = "width: 80px;"src="{{$pro->image}}" alt=""></td>
             <td style="width: 120px;">{{$pro->category}}</td>
+            <td style="width: 120px;">{{number_format(($pro->price))}} đ</td>
             <td style="width: 120px;">{{$pro->status}}</td>
             <td style="width: 120px;">{{$pro->sl}}</td>
             <td style="width: 120px;">{{$pro->slug}}</td>

@@ -14,7 +14,7 @@
       @enderror
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Ảnh sản phẩm</label>
-        <input type="text" class="form-control" name="image" id="exampleFormControlInput1" placeholder="">
+        <input type="file" class="form-control" name="image" id="exampleFormControlInput1" placeholder="">
       </div>
       @error('image')
           <div class="alert alert-danger">{{$message}}</div>
