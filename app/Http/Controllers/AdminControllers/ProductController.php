@@ -5,6 +5,7 @@ namespace App\Http\Controllers\AdminControllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -12,7 +13,9 @@ use RealRashid\SweetAlert\Facades\Alert;
 class ProductController extends Controller
 {
     public function product(){
-        $product = Product::OrderBy('id', 'desc')->paginate(5);
+        $product = Product::select('id','image','name','price','category','sl','status','slug')
+        // ->with('category:categories.id,categories.name')
+        ->paginate(5);
         return view('admin.products.home', compact('product'));
     }
 
@@ -23,10 +26,12 @@ class ProductController extends Controller
     }
 
     public function addForm(){
-        return view('admin/products/add');
+        $category = Category::all();
+        return view('admin/products/add', compact('category'));
     }
 
     public function add(Request $request){
+        
         $product = new Product();
         $request->validate(
             [
@@ -45,18 +50,19 @@ class ProductController extends Controller
     }
 
     public function editForm($id){
+        $category = Category::all();
         $pro = Product::find($id);
-        return view('admin/products/edit', compact('pro'));
+        return view('admin/products/edit', compact('pro','category'));
     }
 
     public function edit(Request $request, $id){
         $product = Product::find($id);
-        $img = $_FILES['image'];
-        if($img['size']>0){
-            $fileName = uniqid() . '-' . $img['name'];
-            move_uploaded_file($img['name'], './public/uploads/'.$fileName);
-            $model->avatar = 'uploads/'.$fileName;
-        }
+        // $img = $_FILES['image'];
+        // if($img['size']>0){
+        //     $fileName = uniqid() . '-' . $img['name'];
+        //     move_uploaded_file($img['name'], './public/uploads/'.$fileName);
+        //     $model->avatar = 'uploads/'.$fileName;
+        // }
         $request->validate(
             [
                 'name' => 'required',

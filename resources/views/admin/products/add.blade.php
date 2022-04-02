@@ -21,11 +21,12 @@
       @enderror
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Danh mục sản phẩm</label>
-        <input type="text" class="form-control" name="category" id="exampleFormControlInput1" placeholder="">
+        <select name="category" id="">
+          @foreach($category as $cate)
+            <option value="">{{$cate->name}}</option>
+          @endforeach
+        </select>
       </div>
-      @error('category')
-          <div class="alert alert-danger">{{$message}}</div>
-      @enderror
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Số lượng sản phẩm</label>
         <input type="number" class="form-control" name="sl" id="exampleFormControlInput1" placeholder="">

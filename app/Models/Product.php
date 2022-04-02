@@ -20,4 +20,17 @@ class Product extends Model
         'sl',
         'slug',
     ];
+
+    // public function category1(){
+    //     return $this->belongsTo(Category::class, 'category');
+    // }
+
+    public function category2(){
+        return $this->belongsToMany(
+            Category::class,
+            'category_product',
+            'product_id',
+            'category_id',
+        );
+    }
 }

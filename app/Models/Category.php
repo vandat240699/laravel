@@ -17,4 +17,17 @@ class Category extends Model
         'status',
         'slug'
     ];
+
+    // public function products(){
+    //     return $this->hasMany(Product::class);
+    // }
+
+    public function product1(){
+        return $this->belongsToMany(
+            Product::class,
+            'category_product',
+            'category_id',
+            'product_id',
+        );
+    }
 }

@@ -23,7 +23,13 @@
           <tr>
             <td style="width: 120px;">{{$pro->name}}</td>
             <td style="width: 120px;"><img style = "width: 80px;"src="{{$pro->image}}" alt=""></td>
-            <td style="width: 120px;">{{$pro->category}}</td>
+            <td style="width: 120px;">
+              <ul>
+                @foreach($pro->category2 as $cate)
+                  <li>{{$cate->name}}</li>
+                @endforeach
+              </ul>
+            </td>
             <td style="width: 120px;">{{number_format(($pro->price))}} đ</td>
             <td style="width: 120px;">{{$pro->status}}</td>
             <td style="width: 120px;">{{$pro->sl}}</td>
