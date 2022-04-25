@@ -22,7 +22,7 @@
           @foreach($product as $pro)
           <tr>
             <td style="width: 120px;">{{$pro->name}}</td>
-            <td style="width: 120px;"><img style = "width: 80px;"src="{{asset('storage/'.$pro->image)}}" alt=""></td>
+            <td style="width: 120px;"><img style = "width: 110px;"src="{{asset('storage/'.$pro->image)}}" alt=""></td>
             <td style="width: 120px;">{{$pro->category1->name}}</td>
             <td style="width: 120px;">{{number_format(($pro->price))}} đ</td>
             <td style="width: 120px;">{{$pro->status}}</td>

@@ -8,7 +8,7 @@
           <tr>
             <th>Name</th>
             <th>Email</th>
-            <th>Password</th>
+            {{-- <th>Password</th> --}}
             {{-- <th style="width:50px;">Chức năng</th> --}}
             <th style="width:50px;">chức năng</th>
         </tr>
@@ -18,7 +18,7 @@
           <tr>
             <td style="width: 120px;">{{$u->name}}</td>
             <td style="width: 120px;">{{$u->email}}</td>
-            <td style="width: 120px;">{{$u->password}}</td>
+            {{-- <td style="width: 120px;">{{$u->password}}</td> --}}
             {{-- <td><a href="{{url('admin/users/edit/'.$u->id)}}" class="btn btn-danger">Edit</a></td> --}}
             <td><form class="delete-form" action="{{route('deleteuser',$u->id)}}" method="POST">
                     @method('DELETE')

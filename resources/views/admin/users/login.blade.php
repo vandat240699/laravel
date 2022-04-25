@@ -32,7 +32,7 @@
                                 <div class="col-1 large-12 col pb-0">
                                     <div class="account-login-inner">
                                         <h3 class="uppercase">Đăng nhập</h3>
-                                        <form class="woocommerce-form woocommerce-form-login login" method="post">
+                                        <form action="" class="woocommerce-form woocommerce-form-login login" method="post">
                                             @csrf
                                             <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                                                 <label for="username">Tên tài khoản hoặc địa chỉ email&nbsp;<span class="required">*</span></label>
@@ -59,6 +59,9 @@
                                             </p>
                                             <p class="woocommerce-LostPassword lost_password">
                                                 <a href="">Quên mật khẩu?</a>
+                                            </p>
+                                            <p class="woocommerce-LostPassword lost_password">
+                                                <a href="/admin/register">Bạn chưa có tài khoản?</a>
                                             </p>
                                         </form>
                                     </div><!-- .login-inner -->

@@ -25,7 +25,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="/admin/categories">Xem danh sách</a>
-                <a class="collapse-item" href="cards.html">chưa có</a>
+                <a class="collapse-item" href="/admin/categories/add">Thêm mới</a>
             </div>
         </div>
     </li>
@@ -40,7 +40,7 @@
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="/admin/products">Xem danh sách</a>
-                <a class="collapse-item" href="">chưa có</a>
+                <a class="collapse-item" href="/admin/products/add">Thêm mới</a>
                 <a class="collapse-item" href="">chưa có</a>
                 <a class="collapse-item" href="">chưa có</a>
             </div>
@@ -56,7 +56,6 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Login Screens:</h6>
                 <a class="collapse-item" href="/admin/login">Chuyển tài khoản</a>
-                <a class="collapse-item" href="/admin/register">Đăng ký mới</a>
                 <a class="collapse-item" href="/admin/users">Xem danh sách user</a>
                 {{-- <a class="collapse-item" href="forgot-password.html">Forgot Password</a> --}}
                 <div class="collapse-divider"></div>

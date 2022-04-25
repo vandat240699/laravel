@@ -55,7 +55,7 @@ class CategoryController extends Controller
             'description' => 'required',
         ]);
         $category->fill($request->all());
-        $category->status = 0;
+        $category->status = 1;
         $category->slug = Str::slug($request->name, '-');
         $category->save();
         Alert::success('Success Title', 'Sửa thành công');

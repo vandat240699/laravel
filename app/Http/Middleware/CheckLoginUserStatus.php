@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 class CheckLoginUserStatus
@@ -18,10 +19,11 @@ class CheckLoginUserStatus
      */
     public function handle(Request $request, Closure $next)
     {
-        $user = Auth::user();
-        if ($user -> id !== 1) {
-            return redirect()-> route('error.404');
+        $user = @Auth::user();
+        if (@$user -> email == "datnvph13011@fpt.edu.vn") {
+            return $next($request);
         }
-        return $next($request);
+        Alert::error("bạn không có quyền truy cập");
+        return redirect()->back();
     }
 }

@@ -64,6 +64,7 @@ class AuthController extends Controller
     public function logout(){
         // $request -> session()-> invalidate();
         // $request -> session() -> regenerateToken();
+        Auth::logout();
         return view('admin.users.login');
     }
 }

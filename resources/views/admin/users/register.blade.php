@@ -20,12 +20,12 @@
 <body id="page-top">
     @include('sweetalert::alert')
     <div id="wrapper">
-        @include('admin/layoutAdmin.sidebar')
+        {{-- @include('admin/layoutAdmin.sidebar') --}}
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-                @include('admin/layoutAdmin.topbar')
+                {{-- @include('admin/layoutAdmin.topbar') --}}
                 <div class="container-fluid">
-                    <div id="login-form-popup" class="lightbox-content">
+                    <div style="margin-top: 100px" id="login-form-popup" class="lightbox-content">
                         <div class="woocommerce-notices-wrapper"></div>
                         <div class="account-container lightbox-inner">
                             <div class="col2-set row row-divided row-large" id="customer_login">
@@ -62,6 +62,9 @@
                                                 <input type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce" value="8a5361920b">
                                                 <input type="hidden" name="_wp_http_referer" value="/converse/">
                                                 <button type="submit" class="woocommerce-Button button" name="register" value="Đăng ký">Đăng ký</button>
+                                            </p>
+                                            <p class="woocommerce-LostPassword lost_password">
+                                                <a href="/admin/login">Đăng nhập ngay</a>
                                             </p>
                                         </form>
                                     </div><!-- .register-inner -->

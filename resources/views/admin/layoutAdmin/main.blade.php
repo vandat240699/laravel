@@ -40,7 +40,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">Bạn có muốn dăng xuất không?</span>
+                        <span aria-hidden="true">Bạn có muốn đăng xuất không?</span>
                     </button>
                 </div>
                 <div class="modal-footer">
